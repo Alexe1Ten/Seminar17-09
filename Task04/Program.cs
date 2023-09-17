@@ -24,5 +24,5 @@ try
 }
 catch (System.FormatException)
 {
-    Console.WriteLine("Ошибка ввода! Вы ввели не число.");
+    Console.WriteLine("Ошибка ввода! Вы ввели не целое число.");
 }
