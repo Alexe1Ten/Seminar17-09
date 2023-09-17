@@ -5,12 +5,12 @@
 // 4 -> 16
 // -3 -> 9
 // -7 -> 49
-// Console.WriteLine("Введите целое число");
-// int num = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("Введите целое число");
+int num = Convert.ToInt32(Console.ReadLine());
 
-// int square = num*num;
+int square = num*num;
 
-// Console.WriteLine($"{num} -> {square}");
+Console.WriteLine($"{num} -> {square}");
 
 
 
