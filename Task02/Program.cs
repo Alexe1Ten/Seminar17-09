@@ -1,21 +1,24 @@
-﻿// 5. Напишите программу, которая на вход принимает
-// одно число (N), а на выходе показывает все целые
-// числа в промежутке от -N до N.
-// 4 -> "-4, -3, -2, -1, 0, 1, 2, 3, 4"
-// 2 -> " -2, -1, 0, 1, 2"
+﻿// Напишите программу, которая на вход принимает два числа и выдаёт, какое число большее, а какое меньшее.
+// a = 5; b = 7 -> max = 7
+// a = 2 b = 10 -> max = 10
+// a = -9 b = -3 -> max = -3
+try
+{
+    Console.WriteLine("Введите число a: ");
+    int a = Convert.ToInt32(Console.ReadLine());
+    Console.WriteLine("Введите число b: ");
+    int b = Convert.ToInt32(Console.ReadLine());
 
-// Console.WriteLine("Введите число: ");
-// int num = Convert.ToInt32(Console.ReadLine());
-// int count = -num;
-// while (count <= num)
-// {
-//     Console.Write($"{count} ");  
-//     count++;
-// }
-
-// 7. Напишите программу, которая принимает на вход
-// трёхзначное число и на выходе показывает последнюю цифру
-// этого числа.
-// 456 -> 6
-// 782 -> 2
-// 918 -> 8
+    if (a > b)
+    {
+        Console.WriteLine($"a = {a}; b = {b} -> max = {a}");
+    }
+    else
+    {
+        Console.WriteLine($"a = {a}; b = {b} -> max = {b}");
+    }
+}
+catch (System.FormatException)
+{
+    Console.WriteLine("Ошибка ввода! Вы ввели не число.");
+}
