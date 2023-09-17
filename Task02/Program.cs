@@ -11,11 +11,11 @@ try
 
     if (a > b)
     {
-        Console.WriteLine($"a = {a}; b = {b} -> max = {a}");
+        Console.WriteLine($"a = {a}; b = {b} -> min = {b}; max = {a}");
     }
     else
     {
-        Console.WriteLine($"a = {a}; b = {b} -> max = {b}");
+        Console.WriteLine($"a = {a}; b = {b} -> min = {a}; max = {b}");
     }
 }
 catch (System.FormatException)
