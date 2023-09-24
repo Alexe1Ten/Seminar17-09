@@ -11,7 +11,7 @@ try
     {
         if (i % 2 == 0)
         {
-            if (i == num | i == num - 1)
+            if (i == num || i == num - 1)
             {
                 result += i;
             }
