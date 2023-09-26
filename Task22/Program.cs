@@ -3,46 +3,21 @@
 // квадратов чисел от 1 до N.
 
 
-// void Square (int num)
-// {
-//     for (int i = 1; i <= num; i++)
-//     {
-//         Console.WriteLine($"{i, 3} -> {i * i, 5}");
-//     }
-// }
-
-
-// Console.WriteLine("Введите число: ");
-// int n = Convert.ToInt32(Console.ReadLine());
-
-// Square(n);
-
-
-static bool IsPalindrome(int number)
+void Square (int num)
 {
-    int temp = 0;
-    int revNumber = 0;
-    int num = number;
-    while (num != 0)
+    for (int i = 1; i <= num; i++)
     {
-        temp = num % 10;
-        num = num / 10;
-        revNumber = revNumber * 10 + temp;
+        Console.WriteLine($"{i, 3} -> {i * i, 5}");
     }
-    if (number == revNumber) return true;
-    else return false;
 }
-int ss = 12321;
-bool x = IsPalindrome(ss);
 
-if (ss < 10000 || ss > 99999)
-{
-    Console.WriteLine($"Число не пятизначное {false}");
-}
-else 
-{
-    Console.WriteLine(x);
-}
+
+Console.WriteLine("Введите число: ");
+int n = Convert.ToInt32(Console.ReadLine());
+
+Square(n);
+
+
 
 
 
