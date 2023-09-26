@@ -27,5 +27,5 @@ Console.WriteLine("Каким числом заканчиваем?");
 int bef = Input();
 
 int [] result = ArrayOfRandom(fr, bef, quan);
-Console.WriteLine(string.Join(",", result));
+Console.WriteLine($"[{string.Join(",", result)}]");
 
