@@ -3,61 +3,25 @@
 // нулями и единицами в случайном порядке.
 // [1,0,1,1,0,1,0,0]
 
-int InputInt()
+int[] RandomArray (int min, int max, int length)
 {
-    return Convert.ToInt32(Console.ReadLine());
-}
-
-string InputStr()
-{
-    return Console.ReadLine();
-}
-
-int [] ArrayOfRandom(int from, int before, int quantity)
-{
-    int [] randomArr = new int[quantity];
-    for (int i = 0; i < quantity; i++)
+    int[] arr = new int [length];
+    var rnd = new Random();
+    for (int i = 0; i < length; i++)
     {
-        randomArr[i] = new Random().Next(from, before + 1);
-    }
-    return randomArr;
-}
-
-int [] ArraySort(int [] arr)
-{
-    for (int i = 0; i < arr.Length - 1; i++)
-    {
-        int maxIndex = i;
-        for (int j = i + 1; j < arr.Length; j++)
-        {
-            if (arr [j] > arr[maxIndex]) maxIndex = j;
-        }
-        int temp = arr[i];
-        arr[i] = arr[maxIndex];
-        arr[maxIndex] = temp;
+        arr[i] = rnd.Next(min, max + 1);
     }
     return arr;
 }
 
-bool Choice(string choice)
+void PrintArray(int[] arr)
 {
-    if (choice == "да" || choice == "yes" || choice == "y") return true;
-    else if (choice == "нет" || choice == "no" || choice == "n") return false;
+    for (int i = 0; i < arr.Length; i++)
+    {
+        Console.Write($"{arr[i]} ");
+    }
 }
 
+int[] array = RandomArray(0, 1, 8);
 
-Console.WriteLine("Сколько должно быть элементов в массиве?");
-int quan = InputInt();
-Console.WriteLine("С какого числа начинаем?");
-int fr = InputInt();
-Console.WriteLine("Каким числом заканчиваем?");
-int bef = InputInt();
-
-int [] result = ArrayOfRandom(fr, bef, quan);
-Console.WriteLine($"[{string.Join(", ", result)}]");
-
-Console.WriteLine("Отсортировать получившийся массив? да/нет");
-string answer = InputStr();
-
-if (Choice(answer)) Console.WriteLine($"[{string.Join(", ", ArraySort(result))}]");
-
+PrintArray(array);
