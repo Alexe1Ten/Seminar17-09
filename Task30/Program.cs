@@ -3,6 +3,8 @@
 // нулями и единицами в случайном порядке.
 // [1,0,1,1,0,1,0,0]
 
+
+
 int[] RandomArray (int min, int max, int length)
 {
     int[] arr = new int [length];
@@ -25,3 +27,4 @@ void PrintArray(int[] arr)
 int[] array = RandomArray(0, 1, 8);
 
 PrintArray(array);
+
