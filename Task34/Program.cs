@@ -15,5 +15,22 @@ int[] RandomArray(int min, int max, int length)
     return arr;
 }
 
+int CountOfEvenNumbers(int[] arr)
+{
+    int count = 0;
+    for (int i = 0; i < arr.Length; i++)
+    {
+        if (arr[i] % 2 == 0) count += 1;
+    }
+    return count;
+}
+
+int[] rndArray = RandomArray(100, 999, 8);
+Console.WriteLine($"[{string.Join(", ", rndArray)}]");
+int countOfEvenNum = CountOfEvenNumbers(rndArray);
+Console.WriteLine($"Количество четных чисел равна {countOfEvenNum}");
+
+
+
 
 
