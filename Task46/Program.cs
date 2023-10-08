@@ -5,18 +5,18 @@
 // 5 -2 33 -2
 // 77 3 8 1
 
-int[,] RandomNumberInMatrix(int m, int n)
+int[,] CreatMatrixRandomInt(int rows, int columns, int min, int max)
 {
-    int[,] result = new int[m, n];
-    var rnd = new Random();
-    for (int i = 0; i < m; i++)
+    int[,] matrix = new int[rows, columns];
+    Random rnd = new();
+    for (int i = 0; i < rows; i++)
     {
-        for (int j = 0; j < n; j++)
+        for (int j = 0; j < columns; j++)
         {
-            result[i, j] = rnd.Next(-99, 100);
+            matrix[i, j] = rnd.Next(min, max + 1);
         }
     }
-    return result;
+    return matrix;
 }
 
 void PrintMatrix(int[,] arr)
@@ -25,11 +25,11 @@ void PrintMatrix(int[,] arr)
     {
         for (int j = 0; j < arr.GetLength(1); j++)
         {
-            Console.Write("{0}\t",arr[i,j]);
+            Console.Write($"{arr[i, j], 6}");
         }
         Console.WriteLine();
     }
 }
 
-int[,] randomMatrix = RandomNumberInMatrix(3, 4);
+int[,] randomMatrix = CreatMatrixRandomInt(3, 4, -99, 99);
 PrintMatrix(randomMatrix);
